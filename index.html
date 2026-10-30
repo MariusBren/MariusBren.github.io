@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marius Brennetuit - Développeur Web</title>
+    <meta name="description" content="Portfolio de Marius Brennetuit, développeur web">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/banner.css">
+    <link rel="stylesheet" href="style/projectcard.css">
+    <link rel="stylesheet" href="style/filters.css">
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <aside class="filters" aria-label="Filtrer les projets">
+      <p class="filters__title" id="filters-title">Projets</p>
+      <div class="filters__options" id="project-filters" role="radiogroup" aria-labelledby="filters-title">
+          <label class="filters__option"><input type="radio" name="category" value="pro" checked>Pro</label>
+          <label class="filters__option"><input type="radio" name="category" value="perso">Perso</label>
+          <label class="filters__option"><input type="radio" name="category" value="all">Tous</label>
+      </div>
+    </aside>
+    <main>
+      <section>
+        <pre class="ascii-art">
+   _____               .__               __________                                      __        .__  __   
+  /     \ _____ _______|__|__ __  ______ \______   \_______   ____   ____   ____   _____/  |_ __ __|__|/  |_ 
+ /  \ /  \\__  \\_  __ \  |  |  \/  ___/  |    |  _/\_  __ \_/ __ \ /    \ /    \_/ __ \   __\  |  \  \   __\
+/    Y    \/ __ \|  | \/  |  |  /\___ \   |    |   \ |  | \/\  ___/|   |  \   |  \  ___/|  | |  |  /  ||  |  
+\____|__  (____  /__|  |__|____//____  >  |______  / |__|    \___  >___|  /___|  /\___  >__| |____/|__||__|  
+        \/     \/                    \/          \/              \/     \/     \/     \/                     
+        </pre>
+
+         <div class="banner">
+          <h1>À la recherche d'une nouvelle expérience en tant que développeur web !</h1>
+          <a class="banner__link" href="documents/CV_M.Brennetuit.pdf" target="_blank" rel="noopener">Voir mon CV</a>
+        </div>
+      </section>
+
+      <div id="projects-list">
+        <!-- Génération des project cards via le script.js -->
+      </div>
+
+      <footer class="footer">
+        <p>© 2026 Marius Brennetuit</p>
+      </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

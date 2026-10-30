@@ -1,0 +1,51 @@
+:root {
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --content-width: 44rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+main {
+  background-color: white;
+  color: darkblue;
+  text-align: center;
+}
+
+body {
+  font-family: var(--font-mono);
+}
+
+.ascii-art {
+  font-size: 0.8rem;
+  white-space: pre;
+  font-weight: bold;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  overflow-x: auto;
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-card__details::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition: block-size 0.25s ease, content-visibility 0.25s allow-discrete;
+  }
+  .project-card__details[open]::details-content {
+    block-size: auto;
+  }
+  @supports (interpolate-size: allow-keywords) {
+    :root { interpolate-size: allow-keywords; }
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card__info { padding: 0.75rem; gap: 0.35rem; }
+  .project-card__title { font-size: 1.1rem; }
+  .project-card__keywords li { font-size: 0.75rem; }
+  .project-card__details summary,
+  .project-card__content { padding-left: 0.75rem; padding-right: 0.75rem; }
+}
